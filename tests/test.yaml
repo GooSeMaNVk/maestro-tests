@@ -2,4 +2,4 @@ appId: tj.komyob.betting
 ---
 - launchApp:
     appId: "tj.komyob.betting"
-    clearState: true
+    clearState: false
