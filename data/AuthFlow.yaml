@@ -1,0 +1,22 @@
+appId: tj.komyob.betting
+---
+- runFlow:
+    when:
+      notVisible: "Войти по номеру телефона"
+    commands:
+      - assertVisible:
+          text: "+992"
+          optional: true # Пропустить проверку, если элемент не виден
+      - inputText: "111111111"
+      - tapOn: "Далее"
+
+- runFlow:
+    when:
+      visible: "Войти по номеру телефона"
+    commands:
+      - tapOn: "Войти по номеру телефона"
+      - assertVisible:
+          text: "+992"
+          optional: true
+      - inputText: "111111111"
+      - tapOn: "Далее"

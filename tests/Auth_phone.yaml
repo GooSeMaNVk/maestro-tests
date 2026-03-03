@@ -1,0 +1,13 @@
+appId: tj.komyob.betting
+---
+- launchApp:
+    appId: "tj.komyob.betting"
+    clearState: true
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: "Есть аккаунт"
+- runFlow:
+    file: "../data/authFlow.yaml"
+- tapOn: "Войти с паролем"
+- inputText: "qwerqwer"
+- tapOn: "Продолжить"
