@@ -1,0 +1,10 @@
+appId: tj.komyob.betting
+---
+- tapOn: |-
+    Иконка акций
+    Акции
+- assertVisible: Акции
+- assertVisible: Войти
+- assertVisible: Регистрация
+- tapOn: Назад
+

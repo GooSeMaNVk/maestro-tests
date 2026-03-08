@@ -1,0 +1,18 @@
+appId: tj.komyob.betting
+---
+- tapOn: |-
+    Иконка техподдержки
+    Поддержка
+- assertVisible: Обращение в поддержку
+- tapOn: |-
+    Чат с поддержкой
+    Написать в чат
+- assertVisible: Задайте вопрос или поделитесь отзывом. Обычно мы отвечаем в течение часа или двух (за исключением выходных)
+- tapOn: Введите сообщение…
+- inputText: "test auto"
+- tapOn:
+    id: send_message_image_button
+- assertVisible: Test auto
+- tapOn:
+    id: close_image_button
+

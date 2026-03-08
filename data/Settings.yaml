@@ -1,0 +1,22 @@
+appId: tj.komyob.betting
+---
+- tapOn: |-
+    Иконка настроек
+    Настройки
+- assertVisible: Настройки
+- assertVisible: Войти
+- assertVisible: Регистрация
+- tapOn: |-
+    Иконка выбора темы
+    Тема
+    Системная
+- tapOn: Светлая
+- takeScreenshot: Theme_Light
+- assertScreenshot: Theme_Light.png
+- tapOn: Тёмная
+- takeScreenshot: Theme_Dark
+- assertScreenshot: Theme_Dark.png
+- tapOn: Системная
+- takeScreenshot: Theme_System
+- assertScreenshot: Theme_System.png
+- tapOn: Назад
