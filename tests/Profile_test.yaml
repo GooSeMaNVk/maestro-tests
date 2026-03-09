@@ -2,7 +2,6 @@ appId: tj.komyob.betting
 ---
 - launchApp:
     appId: "tj.komyob.betting"
-    clearState: true
 - waitForAnimationToEnd:
     timeout: 5000
 - tapOn: Маска
@@ -11,6 +10,9 @@ appId: tj.komyob.betting
 - assertVisible: Профиль
 - assertVisible: Регистрация
 - assertVisible: Войти
+- assertVisible: |-
+    Иконка личных данных
+    Личные данные
 - assertVisible: |-
     Иконка техподдержки
     Поддержка
@@ -22,11 +24,23 @@ appId: tj.komyob.betting
     Иконка бонус-клуба
     Бонус-клуб
 - assertVisible: |-
+    Иконка реферальной программы
+    Реферальная программа
+
+- assertVisible: |-
     Иконка акций
     Акции
+- repeat:
+    times: 1
+    commands:
+      - scroll
 - assertVisible: |-
     Иконка настроек
     Настройки
+- assertVisible: |-
+    Иконка выхода из аккаунта
+    Выйти
+
 - runFlow:
     file: "../flows/Support.yaml"
 - runFlow:
