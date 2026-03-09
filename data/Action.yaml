@@ -7,4 +7,3 @@ appId: tj.komyob.betting
 - assertVisible: Войти
 - assertVisible: Регистрация
 - tapOn: Назад
-

@@ -15,4 +15,3 @@ appId: tj.komyob.betting
 - assertVisible: Test auto
 - tapOn:
     id: close_image_button
-

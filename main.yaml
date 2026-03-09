@@ -1,0 +1,8 @@
+appId: tj.komyob.betting
+---
+- runFlow:
+    file: "tests/Profile_no_auth.yaml"
+- runFlow:
+    file: "tests/Auth_phone.yaml"
+- runFlow:
+    file: "tests/Profile_auth.yaml"
