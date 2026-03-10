@@ -3,7 +3,7 @@ appId: tj.komyob.betting
 - launchApp:
     appId: "tj.komyob.betting"
 - waitForAnimationToEnd:
-    timeout: 5000
+    timeout: 6000
 - tapOn: Маска
 - tapOn:
     id: bottom_nav_bar_profile
