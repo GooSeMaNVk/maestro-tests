@@ -7,7 +7,7 @@ appId: tj.komyob.betting
     timeout: 5000
 - tapOn: "Есть аккаунт"
 - runFlow:
-    file: "../flows/auth/authFlow.yaml"
+    file: "../flows/auth/AuthFlow.yaml"
 - tapOn: "Войти с паролем"
 - inputText: "qwerqwer"
 - tapOn: "Продолжить"

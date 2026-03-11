@@ -19,4 +19,5 @@ appId: tj.komyob.betting
           text: "+992"
           optional: true
       - inputText: "111111111"
+      - inputText: "qwerqwer"
       - tapOn: "Далее"
