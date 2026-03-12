@@ -1,2 +1,12 @@
 appId: tj.komyob.betting
 ---
+- scroll
+- assertVisible: |-
+    Звезда
+    Избранное
+- tapOn: |-
+    Звезда
+    Избранное
+- assertVisible: Избранное
+- tapOn: Назад
+# Дописать тесты!!!!

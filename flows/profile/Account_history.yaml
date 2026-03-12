@@ -1,0 +1,11 @@
+appId: tj.komyob.betting
+---
+- scroll
+- assertVisible: |-
+    Иконка истории аккаунта
+    История счёта
+- tapOn: |-
+    Иконка истории аккаунта
+    История счёта
+- assertVisible: История счёта
+- tapOn: Назад
