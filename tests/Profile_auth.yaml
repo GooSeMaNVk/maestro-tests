@@ -2,15 +2,10 @@ appId: tj.komyob.betting
 ---
 - launchApp:
     appId: "tj.komyob.betting"
-    clearState: true
 - waitForAnimationToEnd:
     timeout: 5000
-- tapOn: Маска
 - tapOn:
     id: bottom_nav_bar_profile
-- assertVisible: Профиль
-- assertVisible: Регистрация
-- assertVisible: Войти
 - assertVisible: |-
     Иконка техподдержки
     Поддержка
@@ -24,6 +19,7 @@ appId: tj.komyob.betting
 - assertVisible: |-
     Иконка акций
     Акции
+- scroll
 - assertVisible: |-
     Иконка настроек
     Настройки

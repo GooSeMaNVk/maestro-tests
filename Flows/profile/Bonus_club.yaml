@@ -3,8 +3,6 @@ appId: tj.komyob.betting
 - tapOn: |-
     Иконка бонус-клуба
     Бонус-клуб
-- assertVisible: Регистрация
-- assertVisible: Войти
 - assertVisible: Иконка информации о бонус-клубе
 - assertVisible: Бонус-клуб
 - tapOn: Иконка информации о бонус-клубе
@@ -12,5 +10,11 @@ appId: tj.komyob.betting
     Как работает наш бонус-клуб?*
     Каждый месяц Вы можете получать бонусы в виде фрибетов совершая ставки и получая за это короны.
 - tapOn: Понятно
-- tapOn: Назад
+- runFlow:
+    when:
+      visible: Безлогина
+    commands:
+      - assertVisible: Регистрация
+      - assertVisible: Войти
 # Написать тесты на проверку нового пользака
+- tapOn: Назад

@@ -28,24 +28,24 @@ appId: tj.komyob.betting
     when:
       visible: Сервис
     commands:
-    - assertVisible: |-
-        Иконка настроек корзины
-        Настройки корзины
-    - assertVisible: |-
-        Иконка настроек возврата купона
-        Настройки возврата купона
-    - assertVisible: |-
-        Иконка умной сортировки
-        Умная сортировка
-    - assertVisible: |-
-        Иконка настроек пин-кода
-        Настроить ПИН-код
-    - assertVisible: |-
-        Иконка смены пароля
-        Сменить пароль
-    - tapOn: |-
-        Иконка уведомлений
-        Уведомления
+      - assertVisible: |-
+          Иконка настроек корзины
+          Настройки корзины
+      - assertVisible: |-
+          Иконка настроек возврата купона
+          Настройки возврата купона
+      - assertVisible: |-
+          Иконка умной сортировки
+          Умная сортировка
+      - assertVisible: |-
+          Иконка настроек пин-кода
+          Настроить ПИН-код
+      - assertVisible: |-
+          Иконка смены пароля
+          Сменить пароль
+      - tapOn: |-
+          Иконка уведомлений
+          Уведомления
 - tapOn: |-
     Иконка настроек корзины
     Настройки корзины
@@ -85,20 +85,20 @@ appId: tj.komyob.betting
 - assertVisible: ПИН-код
 - tapOn: Вход по ПИН-коду
 - repeat:
-    times: 3 
+    times: 3
     commands:
       - tapOn: Цифра один
 - tapOn: Цифра два
 - assertVisible: Повтори ПИН-код
 - repeat:
-    times: 3  
+    times: 3
     commands:
       - tapOn: Цифра один
 - tapOn: Цифра три
 - tapOn: Вход по ПИН-коду
 - assertVisible: Введите ПИН-код
 - repeat:
-    times: 3 
+    times: 3
     commands:
       - tapOn: Цифра один
 - tapOn: Цифра три
