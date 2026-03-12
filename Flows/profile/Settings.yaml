@@ -1,22 +1,105 @@
 appId: tj.komyob.betting
 ---
+- scroll
+
 - tapOn: |-
     Иконка настроек
     Настройки
-- assertVisible: Настройки
-- assertVisible: Войти
-- assertVisible: Регистрация
+
+# Проверка безлогинной зоны
+- runFlow:
+    commands:
+      - tapOn: |-
+          Иконка выбора темы
+          Тема
+          Системная
+      - tapOn: Светлая
+      - takeScreenshot: Theme_Light
+      - assertScreenshot: Theme_Light.png
+      - tapOn: Тёмная
+      - takeScreenshot: Theme_Dark
+      - assertScreenshot: Theme_Dark.png
+      - tapOn: Системная
+      - takeScreenshot: Theme_System
+      - assertScreenshot: Theme_System.png
+      - tapOn: Назад
+# Проверка логинной зоны
+- runFlow:
+    when:
+      visible: Сервис
+    commands:
+    - assertVisible: |-
+        Иконка настроек корзины
+        Настройки корзины
+    - assertVisible: |-
+        Иконка настроек возврата купона
+        Настройки возврата купона
+    - assertVisible: |-
+        Иконка умной сортировки
+        Умная сортировка
+    - assertVisible: |-
+        Иконка настроек пин-кода
+        Настроить ПИН-код
+    - assertVisible: |-
+        Иконка смены пароля
+        Сменить пароль
+    - tapOn: |-
+        Иконка уведомлений
+        Уведомления
 - tapOn: |-
-    Иконка выбора темы
-    Тема
-    Системная
-- tapOn: Светлая
-- takeScreenshot: Theme_Light
-- assertScreenshot: Theme_Light.png
-- tapOn: Тёмная
-- takeScreenshot: Theme_Dark
-- assertScreenshot: Theme_Dark.png
-- tapOn: Системная
-- takeScreenshot: Theme_System
-- assertScreenshot: Theme_System.png
+    Иконка настроек корзины
+    Настройки корзины
+- assertVisible: Настройки корзины
+- tapOn: Только повышение
+- takeScreenshot: basket.only_promotion
+- assertScreenshot: basket.only_promotion.png
+- tapOn: Все
+- takeScreenshot: basket.all
+- assertScreenshot: basket.all.png
+- tapOn: Назад
+- assertVisible: |-
+    Иконка настроек возврата купона
+    Настройки возврата купона
+- tapOn: |-
+    Иконка настроек возврата купона
+    Настройки возврата купона
+- assertVisible: Настройки продажи купона
+- tapOn: Продажа без подтверждения
+- takeScreenshot: without confirmation
+- assertScreenshot: without confirmation.png
+- tapOn: Только повышение
+- takeScreenshot: coupons,only_promotion
+- assertScreenshot: coupons,only_promotion.png
+- tapOn: Все
+- takeScreenshot: coupons.all
+- assertScreenshot: coupons.all.png
+- tapOn: Назад
+- tapOn: |-
+    Иконка умной сортировки
+    Умная сортировка
+- takeScreenshot: smart.sort
+- assertScreenshot: smart.sort.png
+- tapOn: |-
+    Иконка настроек пин-кода
+    Настроить ПИН-код
+- assertVisible: ПИН-код
+- tapOn: Вход по ПИН-коду
+- repeat:
+    times: 3 
+    commands:
+      - tapOn: Цифра один
+- tapOn: Цифра два
+- assertVisible: Повтори ПИН-код
+- repeat:
+    times: 3  
+    commands:
+      - tapOn: Цифра один
+- tapOn: Цифра три
+- tapOn: Вход по ПИН-коду
+- assertVisible: Введите ПИН-код
+- repeat:
+    times: 3 
+    commands:
+      - tapOn: Цифра один
+- tapOn: Цифра три
 - tapOn: Назад

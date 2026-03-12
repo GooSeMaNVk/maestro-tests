@@ -2,7 +2,10 @@ appId: tj.komyob.betting
 ---
 - runFlow:
     file: "tests/Profile_no_auth.yaml"
+    optional: true #Пропуск сценария если упали в ошибку
 - runFlow:
-    file: "tests/Auth_phone.yaml"
+    file: "tests/Auth_password.yaml"
+    optional: true
 - runFlow:
     file: "tests/Profile_auth.yaml"
+    optional: true

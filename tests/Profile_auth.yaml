@@ -2,3 +2,36 @@ appId: tj.komyob.betting
 ---
 - launchApp:
     appId: "tj.komyob.betting"
+    clearState: true
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: Маска
+- tapOn:
+    id: bottom_nav_bar_profile
+- assertVisible: Профиль
+- assertVisible: Регистрация
+- assertVisible: Войти
+- assertVisible: |-
+    Иконка техподдержки
+    Поддержка
+- assertVisible: |-
+    Иконка выбора языка
+    Язык
+    Русский
+- assertVisible: |-
+    Иконка бонус-клуба
+    Бонус-клуб
+- assertVisible: |-
+    Иконка акций
+    Акции
+- assertVisible: |-
+    Иконка настроек
+    Настройки
+- runFlow:
+    file: "../flows/profile/Support.yaml"
+- runFlow:
+    file: "../flows/profile/Bonus_club.yaml"
+- runFlow:
+    file: "../flows/Action.yaml"
+- runFlow:
+    file: "../flows/profile/Settings.yaml"
