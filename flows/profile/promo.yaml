@@ -1,0 +1,16 @@
+appId: tj.komyob.betting
+---
+- assertVisible: |-
+    Иконка подарков
+    Промо
+- tapOn: |-
+    Иконка подарков
+    Промо
+- assertVisible: Промо
+- tapOn:
+    id: Поле ввода промокода
+- inputText: "test"
+- tapOn: Применить
+- assertVisible: Фрибеты
+- tapOn: Назад
+# слишком быстро ошибка исчезает - assertVisible: Промокод не найден
